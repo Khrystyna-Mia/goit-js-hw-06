@@ -6,11 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 3</title>
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      .gallery-list{
+        list-style: none;
+        margin-top: 10px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-items: center;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <ul class="gallery"></ul>
+    <ul class="gallery js-gallery"></ul>
 
     <script src="js/task-03.js" type="module"></script>
   </body>
