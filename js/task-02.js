@@ -23,8 +23,10 @@ const foodIngredientsEl = ingredients => {
     const itemEl = document.createElement('li');
     itemEl.textContent = ingredient;
     itemEl.classList.add('item');
-    ulList.append(itemEl);
+    ulList.appendChild(itemEl);
     
+    // console.log(itemEl);
+
     return itemEl;
   });
 };
@@ -33,6 +35,7 @@ const ingredientsEl = foodIngredientsEl(ingredients);
 ulList.append(...ingredientsEl);
 
 console.log(ingredientsEl);
+
 
 //  const ingredientsEl = ingredients.map(ingredient => {
 //    const itemEl = document.createElement('li');
