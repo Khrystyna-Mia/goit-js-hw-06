@@ -30,7 +30,8 @@ const createAnImageGallery = ({ url, alt }) => {
           </li>`;
   
 };
-// const galleryMarkup = images.map(createAnImageGallery).join(""); /один из вариантов;
+// const galleryMarkup = images.map(createAnImageGallery).join(""); /* один из вариантов решения задачи */
+
 
 const galleryMarkup = images.reduce((acc, item) => acc + createAnImageGallery(item), []);
 console.log(galleryMarkup);
