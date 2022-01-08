@@ -5,27 +5,23 @@
 // 2. Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай значение счтетчика.
 // 3. Обновляй интерфейс новым значением переменной counterValue.
 
-// const counterBtn = {
-//     subbtn: document.querySelector("[data-action='decrement']"),
-//     addbtn: document.querySelector("[data-action='increment']"),
-//     span: document.querySelector('#value'),
-// };
+const btn = {
+    decr: document.querySelector("[data-action='decrement']"),
+    incr: document.querySelector("[data-action='increment']"),
+    span: document.querySelector('#value'),
+};
 
+let counterValue = 0;
 
-// const counterValue = 0;
+const decrement = () => {
+    counterValue -= 1;
+    btn.span.textContent = counterValue;
+};
 
-// const decrement = () => {
-//     counterValue -= 1;
+const increment = () => {
+    counterValue += 1;
+    btn.span.textContent = counterValue;
+};
 
-//     counterBtn.span.textContent = counterValue;
-// };
-
-// const increment = () => {
-//     counterValue += 1;
-
-//     counterBtn.span.textContent = counterValue;
-
-// };
-
-// counterBtn.subbtn.addEventListener("click", decrement);
-// counterBtn.addbtn.addEventListener("click", increment);
+btn.decr.addEventListener('click', decrement);
+btn.incr.addEventListener('click', increment);
