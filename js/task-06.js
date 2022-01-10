@@ -5,22 +5,16 @@
 // border инпута становится зелёным, если неправильное - красным.
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
-// const input = document.getElementById("validation-input");
-// const totalLength = input.getAttribute("data-length");
-// const otherTotalLength = parseInt(totalLength, 16);
+const input = document.getElementById("validation-input");
 
-// input.addEventListener('blur', event => {
-//     if (event.value.lengt === otherTotalLength) {
-//         event.classList.add('valid');
-//         event.classList.remove('invalid');
-//     }
-
-//     if (event.value.length === 0) {
-//         event.classList.remove("valid");
-//         event.classList.remove("invalid");
-//     }
-
-//     if (event.value.lengt !== otherTotalLength && event.value.lengt !== 0) {
-//         event.classList.add("invalid");
-//     }
-// });
+input.onblur = function () {
+    console.log(input.value.length);
+    
+    if (input.getAttribute('data-length') < input.value.length) {
+        input.classList.remove('valid');
+        input.classList.add('invalid');
+    } else {
+        input.classList.remove('invalid');
+        input.classList.add('valid');
+    }
+};
