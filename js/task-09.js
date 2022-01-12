@@ -15,3 +15,4 @@ btn.addEventListener('click', () => {
   document.body.style.backgroundColor = getRandomHexColor();
   span.textContent = getRandomHexColor();
 });
+
